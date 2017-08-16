@@ -28,7 +28,7 @@ $(function randomAPOD (){
 
 
 
-var $xhr = $.getJSON('https://api.nasa.gov/planetary/apod?api_key=PirZOUN6wUlpA1bv8nVmcbZMDZ3rb8en4F0nsWEw' + newDate);
+var $xhr = $.getJSON('https://api.nasa.gov/planetary/apod?api_key=PirZOUN6wUlpA1bv8nVmcbZMDZ3rb8en4F0nsWEw' + "&date=2016-10-10");
 $xhr.done(function(data) {
 
     console.log(data.url);
