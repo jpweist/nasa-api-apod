@@ -1,5 +1,7 @@
 
-$(function randomAPOD (){
+$(function 
+
+  randomAPOD (){
   // add DATE text &date=2016-10-09
   var randomYear = Math.floor((Math.random() * 11) + 2006);
   var randomMonth = Math.floor((Math.random() * 12) + 1);
@@ -26,7 +28,17 @@ $(function randomAPOD (){
 // console.log("randomMonth " + randomMonth)
 // }
 
+//// get today
+var newDate = new Date();
+var dd = newDate.getDate();
+var mm = newDate.getMonth()+1;//January is 0!`
 
+var yyyy = newDate.getFullYear();
+if(dd<10){dd='0'+dd}
+if(mm<10){mm='0'+mm}
+var newDate = "&date=" + yyyy+'-'+mm+'-'+dd;
+
+///
 
 var $xhr = $.getJSON('https://api.nasa.gov/planetary/apod?api_key=PirZOUN6wUlpA1bv8nVmcbZMDZ3rb8en4F0nsWEw' + newDate);
 $xhr.done(function(data) {
