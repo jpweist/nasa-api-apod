@@ -1,6 +1,6 @@
 nav #imageORurl {
-	height: 110%;
-	width: 110%;
+	max-width: 100%;
+	height: auto;
 	padding-bottom: 2.25em;
 }
 
@@ -14,4 +14,7 @@ nav #imageORurl {
 .hidejumbotron{
 	
 }
-
+#jimweist {
+	width: 50%;
+	height: auto;
+}
