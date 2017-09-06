@@ -31,14 +31,14 @@ $(function randomAPOD (){
 var $xhr = $.getJSON('https://api.nasa.gov/planetary/apod?api_key=PirZOUN6wUlpA1bv8nVmcbZMDZ3rb8en4F0nsWEw' + "&date=2016-10-10");
 $xhr.done(function(data) {
 
-    console.log(data.url);
+    // console.log(data.url);
     var isImage = checkURL(data.url);
     if(isImage == true){
-console.log("is image")
+// console.log("is image")
      $('#imageORurl').append("<img src=\"" + data.url + "\">" );
 
     }else{
-      console.log("NOT image")
+      // console.log("NOT image")
 
       $('#imageORurl').append( $( "<a href=\"" + data.url + "\">Todays Image is Interactive!</a>" ) );
 
@@ -51,10 +51,10 @@ console.log("is image")
          $('#date').text(data.date)
          $('#explanation').text(data.explanation)
 
-         console.log("data.title" + data.title);
-         console.log("ata.copyright)" + data.copyright);
-         console.log("data.date)" + data.date);
-         console.log("data.explanation)" + data.explanation);
+         // console.log("data.title" + data.title);
+         // console.log("ata.copyright)" + data.copyright);
+         // console.log("data.date)" + data.date);
+         // console.log("data.explanation)" + data.explanation);
 
          $('#displaydate').text(data.date);
 
@@ -69,7 +69,7 @@ function checkURL(url) {
 
 
 $xhr.fail(function(err) {
-    console.log(err);
+    // console.log(err);
 
 });
 
@@ -88,7 +88,7 @@ var $xNASAearth = $.get('https://api.nasa.gov/planetary/earth/imagery?api_key=Pi
 // });
 
 $xNASAearth.fail(function(err) {
-    console.log(err);
+    // console.log(err);
 
 });
 $('img').animate({
@@ -119,13 +119,13 @@ $('img').animate({
 //
 // });
  var randomImageMars = Math.ceil(Math.random() * 1000);
-console.log(randomImageMars)
+// console.log(randomImageMars)
 $xhr.fail(function(err) {
-    console.log(err);
+    // console.log(err);
 
 });
 var nasaAPODrandomYear = Math.ceil(Math.random() + 1 * 2000);
-console.log(nasaAPODrandomYear)
+// console.log(nasaAPODrandomYear)
 
 
 
@@ -140,7 +140,7 @@ console.log(nasaAPODrandomYear)
     //   });
 
       $('#imageORurl').click(function(){
-          console.log("photo clicked");
+          // console.log("photo clicked");
           $('p').toggle(500);
           $('this').toggleClass('bigger');
 
