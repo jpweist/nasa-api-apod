@@ -6,5 +6,7 @@ Technolgys used: JavaScript, bootstrap, and Ajax.
 
 
 # https://jpweist.github.io/nasa-api-apod/
+![Alt Text](https://github.com/jpweist/nasa-api-apod/blob/master/nasa-api.gif)
+
 
 
